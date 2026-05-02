@@ -1,0 +1,26 @@
+[project]
+name = "electricity-usage-tracker-backend"
+version = "0.1.0"
+description = "Backend for electricity usage tracking and forecasting"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "pydantic",
+    "sqlalchemy",
+    "alembic",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "httpx",
+]
+
+[tool.pytest.ini_options]
+pythonpath = [
+    "."
+]
+testpaths = [
+    "tests"
+]
